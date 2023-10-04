@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="enabledOnReformat" value="true" />
+    <option name="pathToExecutable" value="C:\Users\PC\AppData\Local\Programs\Python\Python310\Scripts\black.exe" />
+    <option name="sdkUUID" value="313040a0-4ad8-4657-8684-6ac226568900" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (goit-hw-8)" project-jdk-type="Python SDK" />
+</project>

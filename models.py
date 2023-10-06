@@ -1,7 +1,5 @@
-from connect import uri
+from connect import bd
 from mongoengine import *
-
-db = connect(host=uri, ssl=True, db="hw8")
 
 
 class Authors(Document):
@@ -15,3 +13,9 @@ class Quotes(Document):
     tags = ListField(StringField())
     author = ReferenceField("Authors")
     quote = StringField()
+
+
+class Users(Document):
+    fullname = StringField()
+    email_address = StringField()
+    take_msg = BooleanField(default=False)

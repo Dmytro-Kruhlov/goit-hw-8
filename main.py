@@ -1,9 +1,9 @@
-from mongoengine import connect
-from connect import uri
+
 from models import Quotes, Authors
 
-bd = connect(host=uri, ssl=True, db="hw8")
+
 if __name__ == "__main__":
+
     while True:
         command = input("Введіть команду: ")
 

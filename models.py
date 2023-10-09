@@ -19,3 +19,5 @@ class Users(Document):
     fullname = StringField()
     email_address = StringField()
     take_msg = BooleanField(default=False)
+    phone_number = StringField()
+    preferred_contact_method = StringField()

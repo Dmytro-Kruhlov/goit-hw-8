@@ -1,5 +1,5 @@
 from faker import Faker
-
+import random
 from models import Users
 
 import pika
@@ -14,11 +14,13 @@ channel.queue_declare(queue='task_queue', durable=True)
 channel.queue_bind(exchange='task_exchange', queue='task_queue')
 
 fake = Faker()
-
+contact_method = ["SMS", "Email"]
 for _ in range(10):
     user = Users(
         fullname=fake.name(),
-        email_address=fake.email()
+        email_address=fake.email(),
+        phone_number=fake.phone_number(),
+        preferred_contact_method=random.choice(contact_method)
     )
     user.save()
     ob_id = str(user.id)
